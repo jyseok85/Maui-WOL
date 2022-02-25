@@ -4,48 +4,64 @@
              BackgroundColor="{DynamicResource SecondaryColor}"
 >
 
-    <ScrollView>
-        <Grid RowSpacing="25" RowDefinitions="Auto,Auto,Auto,Auto,*"
-              Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <BoxView Color="gray" Grid.Row="0" Grid.ColumnSpan="3"/>
+        <Label Text="Server"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+        <Label Grid.Column="1"
+                   Text="WOL"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+        <Label Grid.Column="2"
+                   Text="Status"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
 
-            <Label 
-                Text="Hello, World!"
-                Grid.Row="0"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
 
-            <Label 
-                Text="Welcome to .NET Multi-platform App UI"
-                Grid.Row="1"
-                SemanticProperties.HeadingLevel="Level1"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+        <Label Grid.Row="1"
+               Text="Main-PC"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+        <Button Grid.Row="1" Grid.Column="1" Text="Fire" Margin="10,5,10,5" Clicked="Button_Clicked1"></Button>
 
-            <Label 
-                Text="Current count: 0"
-                Grid.Row="2"
-                FontSize="18"
-                FontAttributes="Bold"
-                x:Name="CounterLabel"
-                HorizontalOptions="Center" />
+        <Label Grid.Row="1" Grid.Column="2"
+               Text="Stopped"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
 
-            <Button 
-                Text="Click me"
-                FontAttributes="Bold"
-                Grid.Row="3"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+        <Label Grid.Row="2"
+               Text="GITLAB"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+        <Button Grid.Row="2" Grid.Column="1" Text="Fire" Margin="10,5,10,5" Clicked="Button_Clicked2"></Button>
 
-            <Image Grid.Row="4"
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                WidthRequest="250"
-                HeightRequest="310"
-                HorizontalOptions="Center" />
+        <Label Grid.Row="2" Grid.Column="2"
+               Text="Stopped"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
 
-        </Grid>
-    </ScrollView>
+        <Label Grid.Row="3"
+               Text="SERVER"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+        <Button Grid.Row="3" Grid.Column="1" Text="Fire" Margin="10,5,10,5" Clicked="Button_Clicked3"></Button>
+
+        <Label Grid.Row="3" Grid.Column="2"
+               Text="Stopped"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+    </Grid>
 </ContentPage>

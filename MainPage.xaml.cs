@@ -2,19 +2,23 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
-
 	public MainPage()
 	{
 		InitializeComponent();
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		count++;
-		CounterLabel.Text = $"Current count: {count}";
 
-		SemanticScreenReader.Announce(CounterLabel.Text);
+    private async void Button_Clicked1(object sender, EventArgs e)
+    {
+		await WOL.WakeOnLan("10-E7-C6-39-8D-7E");		
+    }
+	private async void Button_Clicked2(object sender, EventArgs e)
+	{
+		await WOL.WakeOnLan("10-E7-C6-39-8D-7E");
+	}
+	private async void Button_Clicked3(object sender, EventArgs e)
+	{
+		await WOL.WakeOnLan("10-E7-C6-39-8D-7E");
 	}
 }
 
